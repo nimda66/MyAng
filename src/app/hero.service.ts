@@ -4,10 +4,13 @@ import {Observable, of} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
 import {Hero} from './hero';
 import {MessageService} from './message.service';
+import {findEmojis} from 'demo-emoji-search';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
+
+console.log(findEmojis(`Hello 🐵! What's up`));
 
 @Injectable({
   providedIn: 'root'
